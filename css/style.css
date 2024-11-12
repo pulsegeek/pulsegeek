@@ -1,0 +1,514 @@
+@import url(https://fonts.googleapis.com/earlyaccess/nicomoji.css);
+/* import da font Nico Moji */
+@import url(https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap);
+/* import da font Spline Sans */
+@import url(https://fonts.googleapis.com/css?family=Comfortaa);
+/* import da font Comfortaa*/
+
+html,
+body {
+    background-color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-family: "Spline Sans", Comfortaa;
+    font-size: 16px;
+}
+
+/* Header e devivados */
+
+header {
+    background-color: #743E89;
+    height: 15%;
+    width: 100%;
+    box-shadow: #B8F526 0px 10px;
+}
+
+div.containerLogo {
+    margin: 1.5% 0 0 7%;
+    height: 60%;
+    width: 6%;
+    float: left;
+}
+
+div.containerIcons {
+    margin: 2.5% 0 0 9%;
+    height: 35%;
+    width: 2.5%;
+    float: left;
+}
+
+.containerBusca {
+    background-color: #FFFFFF;
+    margin: 2.5% 0 0 7%;
+    height: 30%;
+    width: 35%;
+    float: left;
+    border-radius: 9px;
+}
+
+#txtBusca {
+    background-color: transparent;
+    padding-left: 2%;
+    border: none;
+    height: 100%;
+    width: 82%;
+}
+
+div.lupa {
+    background-color: #B8F526;
+    height: 100%;
+    width: 15%;
+    border-radius: 0 9px 9px 0;
+    float: right;
+}
+
+.containerIcons {
+    position: relative;
+}
+
+/* Formatação das imagens */
+img {
+    height: 100%;
+    width: 100%;
+}
+
+#iconLupa {
+    width: 40%;
+    height: 80%;
+    opacity: 60%
+}
+
+/* Formatação do Section e derivados */
+
+section {
+    margin: 5%;
+}
+
+div.containerCategorias {
+    background-color: #743E89;
+    width: 30%;
+    height: 12%;
+    float: left;
+    border-radius: 15px;
+    margin-bottom: 5%;
+}
+
+/* Clearfix para corrigir o layout caso necessário */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+div.imgCategorias{
+    float: right;
+    height: 60%;
+    margin-right: 10%;
+}
+
+/* Formatação dos cards de produtos */
+
+
+.ofertas {
+    text-align: center;
+    margin: 20px;
+}
+
+.ofertas h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.ofertas p {
+    color: red;
+}
+
+.produtos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.produto-card {
+    width: 20%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.produto-card h3 {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.preco-novo {
+    margin-left: 10%;
+    float: left;
+    color: #743E89;
+    font-weight: bold;
+}
+
+.preco-antigo {
+    margin-left: 10%;
+    float: left;
+    color: #888;
+    text-decoration: line-through;
+}
+
+/* Formatação do Footer */
+
+/* Estilos para o footer */
+footer {
+    background-color: #743E89;
+    padding: 50px 0;
+    color: white;
+    border-top: #B8F526 solid 10px;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-coluna {
+    width: 20%;
+    margin-bottom: 20px;
+}
+
+.footer-coluna h3 {
+    color: #B8F526;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer-coluna p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 12px;
+    color: #CCCCCC;
+}
+
+/* Munu cascata e submenu */
+.estiloMenu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    width: 200px;
+    top: 100%;
+    /* Abaixo do ícone de menu */
+    left: 0;
+    z-index: 100;
+    box-shadow: 4px 4px 11px #ccc;
+}
+
+.estiloMenu ul {
+    list-style: none;
+    padding: 10px;
+    margin: 2%;
+}
+
+.estiloMenu li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+li.borda {
+    border-bottom: solid 2px #ccc;
+}
+
+.estiloMenu li:hover {
+    background-color: #f0f0f0;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    /* Posiciona à direita do item principal */
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 16px;
+    padding: 5px;
+    width: 150px;
+    z-index: 101;
+    box-shadow: 4px 4px 11px #ccc;
+}
+
+#rpgMenu .submenu {
+    top: 60%;
+    left: 100%;
+    transform: translateY(-40%);
+}
+
+#cardsMenu:hover .submenu,
+#cardsMenu:focus .submenu,
+#rpgMenu:hover .submenu,
+#rpgMenu:focus .submenu {
+    display: block;
+}
+
+.submenu li {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.submenu li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Formulário de cadastro */
+.cadastro {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.form-cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.linha {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.campo {
+    width: 30%;
+    margin-bottom: 10px;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #6A367E;
+    text-align: left;
+}
+
+.campo input {
+    width: 100%;
+    padding: 10px;
+    border: transparent;
+    border-radius: 10px;
+    background-color: #E0D1E4;
+}
+
+/* Alinhamento do botão na última linha */
+#botaoCadastro #botao {
+    width: 30%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+#botaoCadastro button {
+    background-color: #B8F526;
+    color: #6A367E;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#botaoCadastro button:hover {
+    background-color: #A5D122;
+}
+
+/* Toggle de cadastro */
+.toggle-cadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.toggle-cadastro p {
+    margin-left: 10px;
+    font-weight: bold;
+    color: #6A367E;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #6A367E;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+/* login */
+p.esqueciSenha {
+    text-align: right;
+    color: #6A367E;
+    margin: 0;
+    font-size: 15px;
+}
+
+#botaoLogin {
+    margin-top: 5%;
+}
+
+#botaoLogin #botao {
+    width: 30%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+#botaoLogin button {
+    background-color: #B8F526;
+    color: #6A367E;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#botaoLogin button:hover {
+    background-color: #A5D122;
+}
+
+.alterarSenha {
+    /* efeito da mudança do input */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 20px;
+}
+
+/* Ajuste do container do slide para ocupar 100% da largura e 50% da altura */
+div.slide {
+    width: 100%;
+    height: 70vh;
+    /* 50% da altura da viewport */
+    position: relative;
+    overflow: hidden;
+}
+
+div.slides {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+img.enquadro {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ajusta a imagem para cobrir todo o slide */
+}
+
+/* Ajuste das dots de navegação */
+div.dot-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+span.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 20px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+span.dot.active {
+    background-color: #6A367E;
+}
+
+/* Formatação de fonts e link */
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: 'Nico Moji';
+}
+
+.title {
+    font-family: Comfortaa;
+}
+
+.tittleForm {
+    color: #6A367E;
+    text-align: center;
+    margin: 3% 0;
+}
+
+.titleCards {
+    font-weight: normal;
+    font-size: xx-large;
+    color: #fff;
+    margin: 5% 0 0 5%;
+    font-style: normal;
+}
