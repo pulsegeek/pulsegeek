@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/icons/d20.png" type="image/png">
+    <title>Pulse Geek - Inicio</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <!-- Fontes Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+
+</head>
+
+<body>
+    <header>
+        <div class="containerLogo">
+            <a href="index.html">
+                <img src="img/logo.png" title="Logo da Pulse Geek" alt="Logo">
+            </a>
+        </div>
+
+        <div class="containerIcons">
+
+            <img src="img/icons/menubranco.png" alt="Icon Menu" id="menuIcon">
+            <div id="menuSuspenso" class="estiloMenu">
+                <ul style="color: #666;">
+                    <li class="barrasMenu borda" id="cardsMenu">CARDS
+                        <ul class="submenu">
+                            <li class="barrasMenu borda">CARDS</li>
+                            <li class="barrasMenu borda">DECKS</li>
+                            <li class="barrasMenu borda">BOOSTER PACKS</li>
+                            <li class="barrasMenu">EQUIPAMENTOS</li>
+                        </ul>
+                    </li>
+                    <li class="barrasMenu borda" id="rpgMenu">RPG
+                        <ul class="submenu">
+                            <li class="barrasMenu borda">DADOS</li>
+                            <li class="barrasMenu borda">LIVROS</li>
+                            <li class="barrasMenu">ACESSORIOS</li>
+                        </ul>
+                    </li>
+                    <li class="barrasMenu">COLECIONÁVEIS</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="containerBusca">
+            <input type="text" id="txtBusca" placeholder="Pesquisar..." />
+            <div class="lupa">
+                <center>
+                    <img src="img/icons/lupa.png" id="iconLupa" alt="Ícone de Lupa">
+                </center>
+            </div>
+        </div>
+        <div class="containerIcons">
+           <a href="carrinho.html"><img src="img/icons/carrinhobranco.png" alt="Icon Carrinho"></a>
+        </div>
+
+
+
+        <div class="containerIcons">
+            <a href="loginCadastro.html"><img src="img/icons/adicionar-usuario.png" alt="Icon Add Usuário"></a>
+        </div>
+
+        
+
+    </header>
+    
+
+    <!-- Slide de img -->
+        <div class="slide">
+            <div class="slides">
+                <img class="enquadro" src="img/slide/slide1.png" alt="Imagem 1">
+            </div>
+            <div class="slides">
+                <img class="enquadro" src="img/slide/slide2.png" alt="Imagem 2">
+            </div>
+            <div class="slides">
+                <img class="enquadro" src="img/slide/slide3.png" alt="Imagem 3">
+            </div>
+            <div class="slides">
+                <img class="enquadro" src="img/slide/slide4.png" alt="Imagem 4">
+            </div>
+
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+    <!-- Slide de img -->
+
+    <section class="clearfix">
+        <!-- Cards de categorias -->
+            <h3 class="title">CATEGORIAS</h3>
+
+            <a href="#">
+                <div class="containerCategorias">
+                    <h1 class="NicoMoji titleCards">CARDS</h1>
+                    <div class="imgCategorias"><img src="img/icons/cards.png" alt="Ícone de Cards"></div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="containerCategorias" style="margin-left: 5%;">
+                    <h1 class="NicoMoji titleCards">RPG</h1>
+                    <div class="imgCategorias"><img src="img/icons/d20.png" alt="Ícone de RPG"></div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="containerCategorias" style="margin-left: 5%;">
+                    <h1 class="NicoMoji titleCards">COLECIONAVEIS</h1>
+                    <div class="imgCategorias"><img src="img/icons/quadrinho.png" alt="Ícone de Colecionáveis"></div>
+                </div>
+            </a>
+        <!-- Cards de categorias -->
+
+        <!-- Cards de ofertas -->
+            <h3 class="title">OFERTAS</h3>
+            <div class="produtoOferta produtos">
+                <!-- Estrutura do produto, será populada dinamicamente -->
+                <div class="produto-card" style="display: none;">
+                    <img src="produto-imagem.jpg" alt="Imagem do Produto">
+                    <h3>Nome do Produto</h3>
+                    <p class="preco-novo">R$ 000,00</p>
+                    <p class="preco-antigo">R$ 000,00</p>
+                </div>
+            </div>
+        <!-- Cards de ofertas -->
+
+        <!-- Cards de lançamento -->
+            <h3 class="title" style="margin-top: 5%;">LANÇAMENTOS</h3>
+            <div class="produtoLancados produtos">
+                <!-- Estrutura do produto, será populada dinamicamente -->
+                <div class="produto-card" style="display: none;">
+                    <img src="produto-imagem.jpg" alt="Imagem do Produto">
+                    <h3>Nome do Produto</h3>
+                    <p class="preco-novo">R$ 000,00</p>
+                    <p class="preco-antigo">R$ 000,00</p>
+                </div>
+            </div>
+        <!-- Cards de ofertas -->
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-coluna">
+                <h3>DEPARTAMENTOS</h3>
+                <p>Cards</p>
+                <p>RPG</p>
+                <p>Colecionáveis</p>
+
+                <h3>INSTITUCIONAL</h3>
+                <p>Sobre</p>
+                <p>Termos e condições</p>
+
+                <h3>FAQ</h3>
+                <p>FAQ</p>
+            </div>
+
+            <div class="footer-coluna">
+                <h3>ATENDIMENTO</h3>
+                <p>Horário de atendimento:</p>
+                <p>Segunda à Sexta: 08:00 às 20:00</p>
+                <p>Sábado: 09:00 às 15:00</p>
+                <p>Endereço:</p>
+                <p>Rua Carlos Gomes, 132 - 9º andar - Centro</p>
+                <p>Franca/SP - CEP: 14003-000</p>
+
+                <h3>CENTRAL SAC</h3>
+                <p>(16) 4444-4444</p>
+            </div>
+
+            <div class="footer-coluna">
+                <h3>EMAIL PARA CONTATO</h3>
+                <p>pulsegeek@gmail.com</p>
+
+                <h3>REDES SOCIAIS</h3>
+                <p>Instagram: @pulsegeek</p>
+
+                <img src="img/logo.png" style="width: 150px; height: 100px;" title="Logo da Pulse Geek" alt="Logo">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright 2024 Pulse Geek - Todos os direitos reservados. Imagens meramente ilustrativas.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/mainScript.js"></script>
+    <script src="js/indexScript.js"></script>
+
+</body>
+
+</html>

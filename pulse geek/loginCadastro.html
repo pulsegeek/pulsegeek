@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/icons/d20.png" type="image/png">
+    <title>Pulse Geek - Inicio</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <!-- Fontes Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+
+</head>
+
+<body>
+    <header>
+        <div class="containerLogo">
+            <a href="index.html">
+                <img src="img/logo.png" title="Logo da Pulse Geek" alt="Logo">
+            </a>
+        </div>
+        <div class="containerIcons">
+            <img src="img/icons/menubranco.png" alt="Icon Menu" id="menuIcon">
+            <div id="menuSuspenso" class="estiloMenu">
+                <ul style="color: #666;">
+                    <li class="barrasMenu borda" id="cardsMenu">CARDS
+                        <ul class="submenu">
+                            <li class="barrasMenu borda">CARDS</li>
+                            <li class="barrasMenu borda">DECKS</li>
+                            <li class="barrasMenu borda">BOOSTER PACKS</li>
+                            <li class="barrasMenu">EQUIPAMENTOS</li>
+                        </ul>
+                    </li>
+                    <li class="barrasMenu borda" id="rpgMenu">RPG
+                        <ul class="submenu">
+                            <li class="barrasMenu borda">DADOS</li>
+                            <li class="barrasMenu borda">LIVROS</li>
+                            <li class="barrasMenu">ACESSORIOS</li>
+                        </ul>
+                    </li>
+                    <li class="barrasMenu">COLECIONÁVEIS</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="containerBusca">
+            <input type="text" id="txtBusca" placeholder="Pesquisar..." />
+            <div class="lupa">
+                <center>
+                    <img src="img/icons/lupa.png" id="iconLupa" alt="">
+                </center>
+            </div>
+        </div>
+        <div class="containerIcons">
+            <img src="img/icons/carrinhobranco.png" alt="Icon Carrinho">
+        </div>
+        <div class="containerIcons">
+            <a href="loginCadastro.html"><img src="img/icons/adicionar-usuario.png" alt="Icon Add Usuário"></a>
+        </div>
+    </header>
+
+
+
+    <section id="cadastro" class="cadastro" style="display:none;">
+        <h1 class="tittleForm">FAZER CADASTRO</h1>
+        <form class="form-cadastro" action="#" method="post">
+            <div class="linha">
+                <div class="campo">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="campo">
+                    <label for="celular">Celular</label>
+                    <input type="tel" id="celular" name="celular" required>
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha</label>
+                    <div style="position: relative;">
+                        <input type="password" class="senha-input" name="novaSenha" required>
+                        <img class="alterarSenha" src="img/icons/olhoSenha.png" alt="Mostrar Senha">
+                    </div>
+                </div>
+            </div>
+
+            <div class="linha">
+
+                <div class="campo">
+                    <label for="dataNascimento">Data de Nascimento</label>
+                    <input type="date" id="dataNascimento" name="dataNascimento" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="campo">
+                    <label for="confirmaSenha">Confirmar Senha</label>
+                    <div style="position: relative;">
+                        <input type="password" class="senha-input" name="confirmaSenha" required>
+                        <img class="alterarSenha" src="img/icons/olhoSenha.png" alt="Mostrar Senha">
+                    </div>
+                </div>
+            </div>
+
+            <div class="linha">
+
+                <div class="campo">
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" name="cpf" required>
+                </div>
+
+                <div id="botaoCadastro">
+                    <button type="submit">CADASTRAR</button>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <section id="login" class="login">
+        <h1 class="tittleForm">FAZER LOGIN</h1>
+        <center>
+            <form class="form-login" action="#" method="post">
+                <div class="campo">
+                    <label for="nome">Email</label>
+                    <input type="text" id="email" name="email" required>
+                </div>
+
+                <div class="campo" style="margin-top: 2%;">
+                    <label for="senha">Senha</label>
+                    <div style="position: relative;">
+                        <input type="password" id="senha" name="senha" required>
+                        <img class="alterarSenha" src="img/icons/olhoSenha.png" alt="Mostrar Senha">
+                    </div>
+                    <a class="esqueciSenha" href="esquecer-senha.html">Esqueci minha senha</a>
+                </div>
+
+                <div id="botaoLogin">
+                    <button type="submit">ENTRAR</button>
+                </div>
+            </form>
+        </center>
+    </section>
+    <div class="toggle-switch toggle-cadastro">
+        <label class="switch">
+            <input type="checkbox" name="cadastro">
+            <span class="slider"></span>
+        </label>
+        <p>Fazer login</p>
+    </div>
+      <footer>
+        <div class="footer-container">
+            <div class="footer-coluna">
+                <h3>DEPARTAMENTOS</h3>
+                <p>Cards</p>
+                <p>RPG</p>
+                <p>Colecionáveis</p>
+
+                <h3>INSTITUCIONAL</h3>
+                <p>Sobre</p>
+                <p>Termos e condições</p>
+
+                <h3>FAQ</h3>
+                <p>FAQ</p>
+            </div>
+
+            <div class="footer-coluna">
+                <h3>ATENDIMENTO</h3>
+                <p>Horário de atendimento:</p>
+                <p>Segunda à Sexta: 08:00 às 20:00</p>
+                <p>Sábado: 09:00 às 15:00</p>
+                <p>Endereço:</p>
+                <p>Rua Carlos Gomes, 132 - 9º andar - Centro</p>
+                <p>Franca/SP - CEP: 14003-000</p>
+
+                <h3>CENTRAL SAC</h3>
+                <p>(16) 4444-4444</p>
+            </div>
+
+            <div class="footer-coluna">
+                <h3>EMAIL PARA CONTATO</h3>
+                <p>pulsegeek@gmail.com</p>
+
+                <h3>REDES SOCIAIS</h3>
+                <p>Instagram: @pulsegeek</p>
+
+                <img src="img/logo.png" style="width: 150px; height: 100px;" title="Logo da Pulse Geek" alt="Logo">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright 2024 Pulse Geek - Todos os direitos reservados. Imagens meramente ilustrativas.</p>
+        </div>
+    </footer>
+
+    <script src="js/mainScript.js"></script>
+    <script src="js/loginScript.js"></script>
+
+</body>
+
+</html>
