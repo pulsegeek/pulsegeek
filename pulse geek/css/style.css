@@ -351,7 +351,7 @@ li.borda {
     color: #6A367E;
 }
 
-.toggle-cadastro{
+.toggle-cadastro {
     justify-content: center;
 }
 
@@ -519,7 +519,7 @@ h1 {
 /*minha conta*/
 
 div.conta {
-    background-color: #6A367E;
+    background-color: #743E89;
     width: 1022px;
     height: 115px;
     left: 253px;
@@ -587,7 +587,11 @@ div.text-conta {
 .botoesConta {
     margin: 7% 0 7% 0;
     list-style-type: none;
-    color: #95C71D;
+    color: #ffffff;
+    margin-top: 20px;
+    cursor: pointer;
+
+
 }
 
 .minha-conta {
@@ -652,7 +656,8 @@ div.cvv {
     margin-top: 20px;
 }
 
-.save-button, .logout-button {
+.save-button,
+.logout-button {
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -662,7 +667,7 @@ div.cvv {
     transition: background-color 0.3s ease;
 }
 
-.save-button{
+.save-button {
     background-color: #7ED321;
 }
 
@@ -670,37 +675,195 @@ div.cvv {
     background-color: #6ABD1E;
 }
 
-.logout-button{
+.logout-button {
     background-color: #D0021B;
 }
 
 .logout-button:hover {
-    background-color: #BA0218;
+    background-color: #8B0202;
 }
-#btn-voltar-carrinho{
-display: flex;
-align-items: center;
-justify-content: center;
-width: 155px;
-height: 43px;
-left: 1097px;
-top: 219px;
-background: #95C71D;
-border-radius: 9px;
-color: #FFFFFF;
+
+#btn-voltar-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 155px;
+    height: 43px;
+    left: 1097px;
+    top: 219px;
+    background: #95C71D;
+    border-radius: 9px;
+    color: #FFFFFF;
 
 }
-div.menu-122{
+
+div.menu-122 {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-div.menu-123{
+
+div.menu-123 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-p.text-123{
+
+p.text-123 {
     font-weight: 500;
-   color: #6A367E; 
+    color: #6A367E;
+}
+
+.texto-alterar {
+    background-color: #743E89;
+    width: 206px;
+    height: 347px;
+    left: 253px;
+    top: 461px;
+}
+
+.end1 {
+    display: flex;
+}
+
+#botaoConc button {
+    background-color: #95C71D;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 130px;
+}
+
+#botaoConc :hover {
+    background-color: #95C71D;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 130px;
+    opacity: 85%;
+}
+
+.adict-prod {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.botaoVoltar button {
+    background-color: #8B0202;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 130px;
+}
+
+.botaoVoltar :hover {
+    background-color: #8B0202;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 130px;
+    opacity: 85%;
+}
+
+#imag- {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    height: 120px;
+    width: 160px;
+    color: #743E89;
+    cursor: pointer;
+
+
+
+}
+
+/* Adicionar fotos */
+#fotos {
+    opacity: 0;
+    cursor: pointer;
+    inset: 0%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Adicionar produtos */
+.input-file {
+    color: #743E89;
+    place-content: center;
+    position: relative;
+    inset: 0;
+    background-color: #DFCFE5;
+    width: 160px;
+    height: 120px;
+    font-size: 100px;
+    border-radius: 10px;
+}
+
+/* Visualizar produtos */
+.produtoTabela {
+    width: 90%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin: 5%;
+    padding: 0;
+}
+
+.produtoTabela td {
+    border: 1px solid #000000;
+    margin: 0;
+    padding: 0;
+}
+
+.produtoTabela td:first-child {
+    width: 60%;
+}
+
+.produtoTabela td:last-child {
+    width: 40%;
+}
+
+.produtoTabela tr:first-child {
+    height: 60%;
+}
+
+.produtoTabela tr:last-child {
+    height: 40%;
+}
+
+.produto-info .preco {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #e53935;
+}
+
+.produto-info .preco-antigo {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 10px;
+}
+
+/* Lista de desejos */
+.listDesejo {
+    height: 100px;
+    width: 100%;
+    border:solid 1px;
+    display: flex;
+    flex-direction: row;
 }

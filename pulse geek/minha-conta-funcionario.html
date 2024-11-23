@@ -65,7 +65,7 @@
     </header>
 
     <section id="minhaconta" class="conta">
-        <h1 id="tittleDiv" class="tittleForm">MINHA CONTA</h1>
+        <h1 id="tittleDiv" class="tittleForm">MINHA CONTA - FUNCIONARIO</h1>
 
         <div class="conta">
             <img src="img/icons/icone-de-usuario.png" id="imagemPerfil">
@@ -81,8 +81,7 @@
                     <li id="LIminhaConta" class="botoesConta">Minha Conta</li>
                     <li id="LIalterarSenha" class="botoesConta">Alterar senha</li>
                     <li id="LIalterarEmail" class="botoesConta">Alterar email</li>
-                    <li id="LIcartões" class="botoesConta">Cartões</li>
-                    <li id="LIenderecos" class="botoesConta">Endereços</li>
+
                     <li id="LIapagar" class="botoesConta">Apagar Conta</li>
                 </ul>
             </div>
@@ -113,13 +112,9 @@
                     <label>Data de nascimento</label>
                     <div class="valor">07/04/2008</div>
                 </div>
-
-                <div class="toggle-switch">
-                    <label class="switch">
-                        <input type="checkbox" name="cadastro">
-                        <span class="slider"></span>
-                    </label>
-                    <p>Quero receber emails promocionais de ofertas</p>
+                <div class="campo">
+                    <label>Função na Empresa</label>
+                    <div class="valor">Técnico em Informática</div>
                 </div>
 
                 <div class="button-container" style="margin-top: 7%;">
@@ -167,63 +162,21 @@
                 </div>
             </div>
 
-            <div class="dados-pessoais" id="attCartao" style="display: none;">
-                <!-- att cartão -->
+            <div class="dados-pessoais" id="addCartao" style="display: none;">
+                <!-- add cartão -->
                 <div class="campo">
                     <label>Gerenciar Cartões salvos</label>
                     <img id="band-master"
                         src="data:image/png;base64,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">
                     <label>****8592</label>
                 </div>
-
-                <div class="end1">
-                    <div class="campo" class="dat">
-                        <label>Data de validade</label>
-                        <div class="valor" style="width: 257px; ">OO/OO</div>
-                    </div>
-                    <div class="campo" class="cvv" style="margin-left:66px ">
-                        <label>CVV</label>
-                        <div class="valor" style="width: 260px;">CVV</div>
-                    </div>
+                <div class="campo" class="dat">
+                    <label>Data de validade</label>
+                    <div class="valor">OO/OO</div>
                 </div>
-
-                <div class="campo">
-                    <label>Nome do titular</label>
-                    <div class="valor">Nome do titular</div>
-                </div>
-                <div class="campo">
-                    <label>CPF do titular</label>
-                    <div class="valor">544.445.787-78</div>
-                </div>
-                <div class="campo">
-                    <label>Telefone</label>
-                    <div class="valor">(16)4002-8922</div>
-                </div>
-
-                <div class="button-container" style="margin-top: 7%;">
-                    <button class="save-button">Salvar</button>
-                    <p id="addInfoCartao" style="color: #743E89;">Adicionar cartão</p>
-                </div>
-            </div>
-
-            <div class="dados-pessoais" id="addCartao" style="display: none;">
-                <!-- add cartão -->
-                <div class="campo">
-                    <label>Adicionar um novo cartão (até 3 cartões )</label>
-                </div>
-                <div class="campo">
-                    <label>Número do Cartão de crédito/débito</label>
-                    <div class="valor">Número do Cartão de crédito/débito</div>
-                </div>
-                <div class="end1">
-                    <div class="campo" class="dat">
-                        <label>Data de validade</label>
-                        <div class="valor" style="width: 257px; ">OO/OO</div>
-                    </div>
-                    <div class="campo" class="cvv" style="margin-left:66px ">
-                        <label>CVV</label>
-                        <div class="valor" style="width: 260px;">CVV</div>
-                    </div>
+                <div class="campo" class="cvv">
+                    <label>CVV</label>
+                    <div class="valor">CVV</div>
                 </div>
                 <div class="campo">
                     <label>Nome do titular</label>
@@ -244,52 +197,6 @@
                 </div>
             </div>
 
-            <div class="dados-pessoais" id="endereco" style="display: none;">
-                <!-- att endereco -->
-                <label style="color: #6A367E;  font-weight: bold;">Adicionar endereço (até 3 endereços)</label>
-
-                <div class="end1">
-                    <div class="campo">
-                        <label>Endereço</label>
-                        <div class="valor" id="end-1" style="width: 420px;">Endereço</div>
-                    </div>
-                    <div class="campo">
-                        <label style="margin-left: 170px; ">Número</label>
-                        <div class="valor" id="end-2" style="margin-left: 175px; width: 150px;">Número</div>
-                    </div>
-                </div>
-
-                <div class="end1">
-                    <div class="campo">
-                        <label>Bairro</label>
-                        <div class="valor" style="width: 250px; ">Bairro</div>
-                    </div>
-                    <div class="campo">
-                        <label>Cidade</label>
-                        <div class="valor" style="width: 240px; ">Cidade</div>
-                    </div>
-                    <div class="campo">
-                        <label>UF</label>
-                        <div class="valor" style="width: 50px;">UF</div>
-                    </div>
-                </div>
-                <div class="end1">
-                    <div class="campo">
-                        <label>Complemento</label>
-                        <div class="valor" style="width: 450px;">Complemento</div>
-                    </div>
-                    <div class="campo">
-                        <label>CEP</label>
-                        <div class="valor" style="width: 120px; margin-left: 205px;">CEP</div>
-                    </div>
-                </div>
-
-                <div class="button-container" style="margin-top: 7%;">
-                    <button class="save-button">Salvar</button>
-                    <p id="addInfoCartao" style="color: #743E89;">Alterar informações de endereço</p>
-                </div>
-            </div>
-
             <div class="dados-pessoais" id="apagar" style="display: none;">
                 <!-- apagar -->
                 <div class="campo">
@@ -307,7 +214,6 @@
             </div>
 
     </section>
-
 
     <footer>
         <div class="footer-container">
@@ -354,7 +260,7 @@
     </footer>
 
     <script src="js/mainScript.js"></script>
-    <script src="js/minhaContaScript.js"></script>
+    <script src="js/minhaContaFuncionarioScript.js"></script>
 
 </body>
 

@@ -24,9 +24,7 @@
                 <img src="img/logo.png" title="Logo da Pulse Geek" alt="Logo">
             </a>
         </div>
-
         <div class="containerIcons">
-
             <img src="img/icons/menubranco.png" alt="Icon Menu" id="menuIcon">
             <div id="menuSuspenso" class="estiloMenu">
                 <ul style="color: #666;">
@@ -49,115 +47,73 @@
                 </ul>
             </div>
         </div>
-        
 
         <div class="containerBusca">
             <input type="text" id="txtBusca" placeholder="Pesquisar..." />
             <div class="lupa">
                 <center>
-                    <img src="img/icons/lupa.png" id="iconLupa" alt="Ícone de Lupa">
+                    <img src="img/icons/lupa.png" id="iconLupa" alt="">
                 </center>
             </div>
         </div>
         <div class="containerIcons">
-           <a href="carrinho.html"><img src="img/icons/carrinhobranco.png" alt="Icon Carrinho"></a>
+            <img src="img/icons/carrinhobranco.png" alt="Icon Carrinho">
         </div>
-
-
-
         <div class="containerIcons">
             <a href="loginCadastro.html"><img src="img/icons/adicionar-usuario.png" alt="Icon Add Usuário"></a>
-            <div id="menuSuspenso" class="estiloMenu">
-                <ul style="color: #666;">
-                    <li class="barrasMenu borda" id="cardsMenu">Meus Pedidos</li>
-                        <li class="barrasMenu borda" id="cardsMenu">INFORMAÇÕES PESSOAIS</li>
-                            <li class="barrasMenu borda" id="cardsMenu">COTAÇÃO de CARTAS</li>
-                                <li class="barrasMenu borda" id="cardsMenu">LISTA de DESEJOS</li>         
-                         </ul>              
-         </div>
         </div>
-
-        
-
     </header>
-    
 
-    <!-- Slide de img -->
-        <div class="slide">
-            <div class="slides">
-                <img class="enquadro" src="img/slide/slide1.png" alt="Imagem 1">
-            </div>
-            <div class="slides">
-                <img class="enquadro" src="img/slide/slide2.png" alt="Imagem 2">
-            </div>
-            <div class="slides">
-                <img class="enquadro" src="img/slide/slide3.png" alt="Imagem 3">
-            </div>
-            <div class="slides">
-                <img class="enquadro" src="img/slide/slide4.png" alt="Imagem 4">
+    <section id="adict-produto" class="adict-prod" >
+        <h1 class="tittleForm">ADICIONAR PRODUTO</h1>
+        <form class="form-cadastro" action="#" method="post">
+            
+            <div class="linha " style="width: 100%;">
+
+                <div class="campo" style="width: 45%;">
+                    <label for="categoria">Categoria</label>
+                    <input type="text" id="categoria" name="categoria" required>
+                </div>
+                <div class="campo" style="width:48%;margin-left: auto; ">
+                    <label for="tipo-prod">Tipo do Produto</label>
+                    <input type="text" id="tipo-prod" name="tipo-prod" required>
+                </div>
             </div>
 
-            <div class="dot-container">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
+            <div class="linha " style="width: 100%;">
+
+                <div class="campo" style="width: 45%;">
+                    <label for="n-dados">Nº de dados</label>
+                    <input type="text" id="n-dados" name="n-dados" required>
+                </div>
+                <div class="campo" style="width:48%;margin-left: auto; ">
+                    <label for="cor-dados">Cor</label>
+                    <input type="text" id="cor-dados" name="cor-dados" required>
+                </div>
+            </div>
+            
+
+        <div style="display: flex;justify-content: space-around;">
+            <div class="botaoVoltar">
+                <button type="submit" style="height: 38px;width: 320;">VOLTAR</button>
+            </div>
+            <div id="botaoConc" >
+                <button type="submit" style="height: 38px">CONCLUIDO</button>
             </div>
         </div>
-    <!-- Slide de img -->
-
-    <section class="clearfix">
-        <!-- Cards de categorias -->
-            <h3 class="title">CATEGORIAS</h3>
-
-            <a href="#">
-                <div class="containerCategorias">
-                    <h1 class="NicoMoji titleCards">CARDS</h1>
-                    <div class="imgCategorias"><img src="img/icons/cards.png" alt="Ícone de Cards"></div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="containerCategorias" style="margin-left: 5%;">
-                    <h1 class="NicoMoji titleCards">RPG</h1>
-                    <div class="imgCategorias"><img src="img/icons/d20.png" alt="Ícone de RPG"></div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="containerCategorias" style="margin-left: 5%;">
-                    <h1 class="NicoMoji titleCards">COLECIONAVEIS</h1>
-                    <div class="imgCategorias"><img src="img/icons/quadrinho.png" alt="Ícone de Colecionáveis"></div>
-                </div>
-            </a>
-        <!-- Cards de categorias -->
-
-        <!-- Cards de ofertas -->
-            <h3 class="title">OFERTAS</h3>
-            <div class="produtoOferta produtos">
-                <!-- Estrutura do produto, será populada dinamicamente -->
-                <div class="produto-card" style="display: none;">
-                    <img src="produto-imagem.jpg" alt="Imagem do Produto">
-                    <h3>Nome do Produto</h3>
-                    <p class="preco-novo">R$ 000,00</p>
-                    <p class="preco-antigo">R$ 000,00</p>
-                </div>
-            </div>
-        <!-- Cards de ofertas -->
-
-        <!-- Cards de lançamento -->
-            <h3 class="title" style="margin-top: 5%;">LANÇAMENTOS</h3>
-            <div class="produtoLancados produtos">
-                <!-- Estrutura do produto, será populada dinamicamente -->
-                <div class="produto-card" style="display: none;">
-                    <img src="produto-imagem.jpg" alt="Imagem do Produto">
-                    <h3>Nome do Produto</h3>
-                    <p class="preco-novo">R$ 000,00</p>
-                    <p class="preco-antigo">R$ 000,00</p>
-                </div>
-            </div>
-        <!-- Cards de ofertas -->
+        </form>
     </section>
 
-    <footer>
+    
+
+                
+
+                
+           
+        </center>
+    </section>
+    
+      <footer>
         <div class="footer-container">
             <div class="footer-coluna">
                 <h3>DEPARTAMENTOS</h3>
@@ -201,9 +157,8 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="js/mainScript.js"></script>
-    <script src="js/indexScript.js"></script>
+    <script src="js/loginScript.js"></script>
 
 </body>
 
