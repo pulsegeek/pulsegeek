@@ -1,0 +1,314 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no">
+    <link rel="icon" href="{% static 'img/icons/d20.png' %}" type="image/png">
+    <title>Pulse Geek - Meus pedidos</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+
+    <!-- Fontes Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+
+</head>
+
+<body>
+    <div id="overlay" class="overlay"></div>
+    <header class="mobileHeader">
+        <!-- Nav para dispositivos com mais de 700px de largura -->
+        <nav class="navDesck">
+            <div class="containerLogo">
+                <a href="{% url 'inicio' %}">
+                    <img src="{% static 'img/logo.png' %}" title="Logo da Pulse Geek" alt="Logo">
+                </a>
+            </div>
+
+            <div class="containerIcons">
+                <img src="{% static 'img/icons/menubranco.png' %}" alt="Icon Menu" id="menuIcon">
+                <div id="menuSuspenso" class="estiloMenu">
+                    <ul style="color: #666;">
+                        <li class="barrasMenu borda" id="cardsMenu">CARDS
+                            <ul class="submenu">
+                                <li class="barrasMenu borda">CARDS</li>
+                                <li class="barrasMenu borda">DECKS</li>
+                                <li class="barrasMenu borda">BOOSTER PACKS</li>
+                                <li class="barrasMenu">EQUIPAMENTOS</li>
+                            </ul>
+                        </li>
+                        <li class="barrasMenu borda" id="rpgMenu">RPG
+                            <ul class="submenu">
+                                <li class="barrasMenu borda">DADOS</li>
+                                <li class="barrasMenu borda">LIVROS</li>
+                                <li class="barrasMenu">ACESSORIOS</li>
+                            </ul>
+                        </li>
+                        <li class="barrasMenu">COLECIONÁVEIS</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="containerBusca">
+                <input type="text" id="txtBusca" placeholder="Pesquisar..." />
+                <div class="lupa">
+                    <center>
+                        <img src="{% static 'img/icons/lupa.png' %}" id="iconLupa" alt="Ícone de Lupa">
+                    </center>
+                </div>
+            </div>
+
+            <div class="containerIcons">
+                <a href="{% url 'pag-carrinho' %}"><img src="{% static 'img/icons/carrinhobranco.png' %}"
+                        alt="Icon Carrinho"></a>
+            </div>
+
+            <div class="containerIcons">
+                <a href="{% url 'pag-cadastro' %}"><img src="{% static 'img/icons/adicionar-usuario.png' %}"
+                        alt="Icon Add Usuário" id="menuIcon"></a>
+            </div>
+        </nav>
+
+
+        <!-- Nav para dispositivos com menos de 700px de largura -->
+        <nav class="navMobile">
+            <div class="containerLogo">
+                <a href="{% url 'inicio' %}">
+                    <img src="{% static 'img/logo.png' %}" title="Logo da Pulse Geek" alt="Logo">
+                </a>
+            </div>
+
+            <div class="containerIcons">
+                <a href="{% url 'pag-cadastro' %}"><img src="{% static 'img/icons/adicionar-usuario.png' %}"
+                        alt="Icon Add Usuário" id="menuIcon"></a>
+            </div>
+
+            <div class="containerIcons">
+                <a href="{% url 'pag-carrinho' %}"><img src="{% static 'img/icons/carrinhobranco.png' %}"
+                        alt="Icon Carrinho"></a>
+            </div>
+
+            <div class="containerIcons">
+                <img src="{% static 'img/icons/menubranco.png' %}" alt="Icon Menu" id="menuIconMobile">
+                <div id="sideMenu" class="side-menu">
+                    <ul>
+                        <!-- Menu principal -->
+                        <li class="menu-item" id="setaCards">
+                            <span>CARDS</span>
+                            <img src="{% static 'img/icons/seta2.png' %}" alt="Seta" class="menu-icon">
+                        </li>
+                        <!-- Submenu de CARDS -->
+                        <ul class="submenu" id="subCards" style="display: none;font-size: 80%;">
+                            <li>CARDS</li>
+                            <li>DECKS</li>
+                            <li>BOOSTER PACKS</li>
+                            <li>EQUIPAMENTOS</li>
+                        </ul>
+                        <!-- Menu principal -->
+                        <li class="menu-item" id="setaRPG">
+                            <span>RPG</span>
+                            <img src="{% static 'img/icons/seta2.png' %}" alt="Seta" class="menu-icon">
+                        </li>
+                        <!-- Submenu de RPG -->
+                        <ul class="submenu" id="subRPG" style="display: none;font-size: 80%;">
+                            <li>DADOS</li>
+                            <li>LIVROS</li>
+                            <li>ACESSÓRIOS</li>
+                        </ul>
+                        <li><a href="#">COLECIONÁVEIS</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="containerBusca">
+                <input type="text" id="txtBuscaMobile" placeholder="Pesquisar..." />
+                <div class="lupa">
+                    <center>
+                        <img src="{% static 'img/icons/lupa.png' %}" id="iconLupaMobile" alt="Ícone de Lupa">
+                    </center>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+        <!-- Nav para dispositivos com menos de 700px de largura -->
+        <nav class="navMobile">
+            <div class="containerLogo">
+                <a href="{% url 'inicio' %}">
+                    <img src="{% static 'img/logo.png' %}" title="Logo da Pulse Geek" alt="Logo">
+                </a>
+            </div>
+
+            <div class="containerIcons">
+                <a href="{% url 'pag-cadastro' %}"><img src="{% static 'img/icons/adicionar-usuario.png' %}" alt="Icon Add Usuário" id="menuIcon"></a>
+            </div>
+
+            <div class="containerIcons">
+                <a href="{% url 'pag-carrinho' %}"><img src="{% static 'img/icons/carrinhobranco.png' %}" alt="Icon Carrinho"></a>
+            </div>
+
+            <div class="containerIcons">
+                < img src="{% static 'img/icons/menubranco.png' %}" alt="Icon Menu" id="menuIconMobile">
+                <div id="sideMenu" class="side-menu">
+                    <ul>
+                        <!-- Menu principal -->
+                        <li class="menu-item" id="setaCards">
+                            <span>CARDS</span>
+                            <img src="{% static 'img/icons/seta2.png' %}" alt="Seta" class="menu-icon">
+                        </li>
+                        <!-- Submenu de CARDS -->
+                        <ul class="submenu" id="subCards" style="display: none;font-size: 80%;">
+                            <li>CARDS</li>
+                            <li>DECKS</li>
+                            <li>BOOSTER PACKS</li>
+                            <li>EQUIPAMENTOS</li>
+                        </ul>
+                        <!-- Menu principal -->
+                        <li class="menu-item" id="setaRPG">
+                            <span>RPG</span>
+                            <img src="{% static 'img/icons/seta2.png' %}" alt="Seta" class="menu-icon">
+                        </li>
+                        <!-- Submenu de RPG -->
+                        <ul class="submenu" id="subRPG" style="display: none;font-size: 80%;">
+                            <li>DADOS</li>
+                            <li>LIVROS</li>
+                            <li>ACESSÓRIOS</li>
+                        </ul>
+                        <li><a href="#">COLECIONÁVEIS</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="containerBusca">
+                <input style="padding: 2.5% 0; width: 85%;" type="text" id="txtBusca" placeholder="Pesquisar..." />
+                <div class="lupa">
+                    <center>
+                        <img src="{% static 'img/icons/lupa.png' %}" id="iconLupa" alt="Ícone de Lupa">
+                    </center>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <section id="lista-desejo" class="list-desejo" style="justify-items: center;">
+        <h1 class="tittleForm">MEUS PEDIDOS</h1>
+        <div class="listDesejo" style="border-color: #0a141d25;border-radius:10px;">                
+            <div style="margin-left: 20px;height: 100%;width: 150px;flex-direction: column;align-content: center;">
+                <p style="margin-bottom: 0px;">Pedido #294834</p>
+                <div style="font-size: 14px;display: flex;opacity: 50%;">
+                    <p style="margin-top: 0px;">2 itens</p>
+                    <p style="margin-top: 0px;margin-left:10px ;margin-bottom: 10px;">18/08/2024</p>
+                </div>
+            </div>
+            
+            <div style="display: flex;align-items: flex-end ;place-content: center ;width: 100%;margin-right: 45px;flex-direction: column;">
+                <p style="width: 30px;height: 20px;color: #83AF1A;margin-bottom: 0px;margin-right: 45px;">R$000,00</p>
+                <p style="opacity:50%;margin-top: 0px;margin-right: 3px">Status do pedido: Pagamento aprovado</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footerDeck">
+        <div class="footer-container">
+            <div class="footer-coluna">
+                <h3>DEPARTAMENTOS</h3>
+                <p>Cards</p>
+                <p>RPG</p>
+                <p>Colecionáveis</p>
+
+                <h3>INSTITUCIONAL</h3>
+                <p>Sobre</p>
+                <p>Termos e condições</p>
+
+                <h3>FAQ</h3>
+                <p>FAQ</p>
+            </div>
+
+            <div class="footer-coluna">
+                <h3>ATENDIMENTO</h3>
+                <p>Horário de atendimento:</p>
+                <p>Segunda à Sexta: 08:00 às 20:00</p>
+                <p>Sábado: 09:00 às 15:00</p>
+                <p>Endereço:</p>
+                <p>Rua Carlos Gomes, 132 - 9º andar - Centro</p>
+                <p>Franca/SP - CEP: 14003- 000</p>
+
+                <h3>CENTRAL SAC</h3>
+                <p>(16) 4444-4444</p>
+            </div>
+
+            <div class="footer-coluna">
+                <h3>EMAIL PARA CONTATO</h3>
+                <p>pulsegeek@gmail.com</p>
+
+                <h3>REDES SOCIAIS</h3>
+                <p>Instagram: @pulsegeek</p>
+
+                <img src="{% static 'img/logo.png' %}" style="width: 150px; height: 100px;" title="Logo da Pulse Geek" alt="Logo">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright 2024 Pulse Geek - Todos os direitos reservados. Imagens meramente ilustrativas.</p>
+        </div>
+    </footer>
+
+    <footer class="footerMobile">
+        <div class="footer-container">
+
+            <div class="footer-coluna">
+                <h3>ATENDIMENTO</h3>
+                <p>Horário de atendimento:</p>
+                <p>Segunda à Sexta: 08:00 às 20:00</p>
+                <p>Sábado: 09:00 às 15:00</p>
+                <p>Endereço:</p>
+                <p>Rua Carlos Gomes, 132 - 9º andar - Centro</p>
+                <p>Franca/SP - CEP: 14003-000</p>
+
+                <h3>CENTRAL SAC</h3>
+                <p>(16) 4444-4444</p>
+
+                <h3>EMAIL PARA CONTATO</h3>
+                <p>pulsegeek@gmail.com</p>
+
+                <h3>REDES SOCIAIS</h3>
+                <p>Instagram: @pulsegeek</p>
+            </div>
+
+            <div class="footer-coluna">
+                <h3>DEPARTAMENTOS</h3>
+                <p>Cards</p>
+                <p>RPG</p>
+                <p>Colecionáveis</p>
+
+                <h3>INSTITUCIONAL</h3>
+                <p>Sobre</p>
+                <p>Termos e condições</p>
+
+                <h3>FAQ</h3>
+                <p>FAQ</p>
+                <img src="{% static 'img/logo.png' %}" style="width: 150px; height: 100px;" title="Logo da Pulse Geek" alt="Logo">
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p style="font-size: 20px;">Copyright 2024 Pulse Geek - Todos os direitos reservados. Imagens meramente ilustrativas.</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/mainScript.js' %}"></script>
+    <script src="{% static 'js/loginScript.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no">
+    <link rel="icon" href="img/icons/d20.png" type="image/png">
+    <title>Pulse Geek - Minha conta funcionário</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <!-- Fontes Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'> 
+</head>
+
+<body>
+    <div id="overlay" class="overlay"></div>
+    <header class="mobileHeader">
+        <!-- Nav para dispositivos com mais de 700px de largura -->
+        <nav class="navDesck">
+            <div class="containerLogo">
+                <a href="{% url 'inicio' %}">
+                    <img src="{% static 'img/logo.png' %}" title="Logo da Pulse Geek" alt="Logo">
+                </a>
+            </div>
+
+            <div class="containerIcons">
+                <img src="{% static 'img/icons/menubranco.png' %}" alt="Icon Menu" id="menuIcon">
+                <div id="menuSuspenso" class="estiloMenu">
+                    <ul style="color: #666;">
+                        <li class="barrasMenu borda" id="cardsMenu">CARDS
+                            <ul class="submenu">
+                                <li class="barrasMenu borda">CARDS</li>
+                                <li class="barrasMenu borda">DECKS</li>
+                                <li class="barrasMenu borda">BOOSTER PACKS</li>
+                                <li class="barrasMenu">EQUIPAMENTOS</li>
+                            </ul>
+                        </li>
+                        <li class="barrasMenu borda" id="rpgMenu">RPG
+                            <ul class="submenu">
+                                <li class="barrasMenu borda">DADOS</li>
+                                <li class="barrasMenu borda">LIVROS</li>
+                                <li class="barrasMenu">ACESSORIOS</li>
+                            </ul>
+                        </li>
+                        <li class="barrasMenu">COLECIONÁVEIS</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="containerBusca">
+                <input type="text" id="txtBusca" placeholder="Pesquisar..." />
+                <div class="lupa">
+                    <center>
+                        <img src="{% static 'img/icons/lupa.png' %}" id="iconLupa" alt="Ícone de Lupa">
+                    </center>
+                </div>
+            </div>
+
+            <div class="containerIcons">
+                <a href="{% url 'pag-carrinho' %}"><img src="{% static 'img/icons/carrinhobranco.png' %}"
+                        alt="Icon Carrinho"></a>
+            </div>
+
+            <div class="containerIcons">
+                <a href="{% url 'pag-cadastro' %}"><img src="{% static 'img/icons/adicionar-usuario.png' %}"
+                        alt="Icon Add Usuário" id="menuIcon"></a>
+            </div>
+        </nav>
+
+
+        <!-- Nav para dispositivos com menos de 700px de largura -->
+        <nav class="navMobile">
+            <div class="containerLogo">
+                <a href="{% url 'inicio' %}">
+                    <img src="{% static 'img/logo.png' %}" title="Logo da Pulse Geek" alt="Logo">
+                </a>
+            </div>
+
+            <div class="containerIcons">
+                <a href="{% url 'pag-cadastro' %}"><img src="{% static 'img/icons/adicionar-usuario.png' %}"
+                        alt="Icon Add Usuário" id="menuIcon"></a>
+            </div>
+
+            <div class="containerIcons">
+                <a href="{% url 'pag-carrinho' %}"><img src="{% static 'img/icons/carrinhobranco.png' %}"
+                        alt="Icon Carrinho"></a>
+            </div>
+
+            <div class="containerIcons">
+                <img src="{% static 'img/icons/menubranco.png' %}" alt="Icon Menu" id="menuIconMobile">
+                <div id="sideMenu" class="side-menu">
+                    <ul>
+                        <!-- Menu principal -->
+                        <li class="menu-item" id="setaCards">
+                            <span>CARDS</span>
+                            <img src="{% static 'img/icons/seta2.png' %}" alt="Seta" class="menu-icon">
+                        </li>
+                        <!-- Submenu de CARDS -->
+                        <ul class="submenu" id="subCards" style="display: none;font-size: 80%;">
+                            <li>CARDS</li>
+                            <li>DECKS</li>
+                            <li>BOOSTER PACKS</li>
+                            <li>EQUIPAMENTOS</li>
+                        </ul>
+                        <!-- Menu principal -->
+                        <li class="menu-item" id="setaRPG">
+                            <span>RPG</span>
+                            <img src="{% static 'img/icons/seta2.png' %}" alt="Seta" class="menu-icon">
+                        </li>
+                        <!-- Submenu de RPG -->
+                        <ul class="submenu" id="subRPG" style="display: none;font-size: 80%;">
+                            <li>DADOS</li>
+                            <li>LIVROS</li>
+                            <li>ACESSÓRIOS</li>
+                        </ul>
+                        <li><a href="#">COLECIONÁVEIS</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="containerBusca">
+                <input type="text" id="txtBuscaMobile" placeholder="Pesquisar..." />
+                <div class="lupa">
+                    <center>
+                        <img src="{% static 'img/icons/lupa.png' %}" id="iconLupaMobile" alt="Ícone de Lupa">
+                    </center>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+    
+    <section id="minhaconta" class="conta">
+        <h1 id="tittleDiv" class="tittleForm">MINHA CONTA - FUNCIONARIO</h1>
+
+        <div class="conta">
+            <img src="img/icons/icone-de-usuario.png" id="imagemPerfil">
+            <div class="text-conta">
+                <p id="nome-minhaConta">Nome</p>
+                <p id="email-minhaConta">E-mail</p>
+            </div>
+        </div>
+
+        <div class="minha-conta">
+            <div class="texto-alterar">
+                <ul>
+                    <li id="LIminhaConta" class="botoesConta">Minha Conta</li>
+                    <li id="LIalterarSenha" class="botoesConta">Alterar senha</li>
+                    <li id="LIalterarEmail" class="botoesConta">Alterar email</li>
+
+                    <li id="LIapagar" class="botoesConta">Apagar Conta</li>
+                </ul>
+            </div>
+
+            <div class="dados-pessoais" id="vizualizarConta">
+                <!-- vizualizar senha -->
+                <div class="campo">
+                    <label>Nome de exibição</label>
+                    <div class="valor">Fulano da Silva</div>
+                </div>
+                <div class="campo">
+                    <label>Informações pessoais</label>
+                    <div class="subtexto">Não serão exibidas publicamente</div>
+                </div>
+                <div class="campo">
+                    <label>E-mail</label>
+                    <div class="valor">fulaninRei.delas@gmail.com</div>
+                </div>
+                <div class="campo">
+                    <label>Telefone</label>
+                    <div class="valor">(16) 4002-8922</div>
+                </div>
+                <div class="campo">
+                    <label>CPF</label>
+                    <div class="valor">544.445.787-78</div>
+                </div>
+                <div class="campo">
+                    <label>Data de nascimento</label>
+                    <div class="valor">07/04/2008</div>
+                </div>
+                <div class="campo">
+                    <label>Função na Empresa</label>
+                    <div class="valor">Técnico em Informática</div>
+                </div>
+
+                <div class="button-container" style="margin-top: 7%;">
+                    <button class="save-button">Salvar</button>
+                    <button class="logout-button">Sair da conta</button>
+                </div>
+            </div>
+
+            <div class="dados-pessoais" id="minhaSenha" style="display: none;">
+                <!-- Minha senha -->
+                <div class="campo">
+                    <label>Senha Atual</label>
+                    <div class="valor">Senha Atual</div>
+                </div>
+                <div class="campo">
+                    <label>Nova senha</label>
+                    <div class="valor">Nova senha</div>
+                </div>
+                <div class="campo">
+                    <label>Confirmar senha</label>
+                    <div class="valor">Confirmar senha</div>
+                </div>
+
+                <div style="margin-top: 5%;"><a style="color: #7ED321;" href="esquecer-senha.html">Esqueci minha
+                        senha</a></div>
+
+                <div class="button-container" style="margin-top: 2%;">
+                    <button class="save-button">Salvar</button>
+                </div>
+            </div>
+
+            <div class="dados-pessoais" id="alterarEmail" style="display: none;">
+                <!-- alterar email -->
+                <div class="campo">
+                    <label>Novo email</label>
+                    <div class="valor">Novo email</div>
+                </div>
+                <div class="campo">
+                    <label>Senha</label>
+                    <div class="valor">Senha</div>
+                </div>
+
+                <div class="button-container" style="margin-top: 2%;">
+                    <button class="save-button">Salvar</button>
+                </div>
+            </div>
+
+            <div class="dados-pessoais" id="addCartao" style="display: none;">
+                <!-- add cartão -->
+                <div class="campo">
+                    <label>Gerenciar Cartões salvos</label>
+                    <img id="band-master"
+                        src="data:image/png;base64,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">
+                    <label>****8592</label>
+                </div>
+                <div class="campo" class="dat">
+                    <label>Data de validade</label>
+                    <div class="valor">OO/OO</div>
+                </div>
+                <div class="campo" class="cvv">
+                    <label>CVV</label>
+                    <div class="valor">CVV</div>
+                </div>
+                <div class="campo">
+                    <label>Nome do titular</label>
+                    <div class="valor">Nome do titular</div>
+                </div>
+                <div class="campo">
+                    <label>CPF do titular</label>
+                    <div class="valor">544.445.787-78</div>
+                </div>
+                <div class="campo">
+                    <label>Telefone</label>
+                    <div class="valor">(16)4002-8922</div>
+                </div>
+
+                <div class="button-container" style="margin-top: 7%;">
+                    <button class="save-button">Salvar</button>
+                    <p id="attInfoCartao" style="color: #743E89;">Atualizar cartão</p>
+                </div>
+            </div>
+
+            <div class="dados-pessoais" id="apagar" style="display: none;">
+                <!-- apagar -->
+                <div class="campo">
+                    <label>E-mail</label>
+                    <div class="valor">E-mail</div>
+                </div>
+                <div class="campo">
+                    <label>Senha</label>
+                    <div class="valor">Senha</div>
+                </div>
+
+                <div class="button-container" style="margin-top: 2%;">
+                    <button class="logout-button">APAGAR</button>
+                </div>
+            </div>
+
+    </section>
+
+
+
+    <footer class="footerDeck">
+        <div class="footer-container">
+            <div class="footer-coluna">
+                <h3>DEPARTAMENTOS</h3>
+                <p>Cards</p>
+                <p>RPG</p>
+                <p>Colecionáveis</p>
+
+                <h3>INSTITUCIONAL</h3>
+                <p>Sobre</p>
+                <p>Termos e condições</p>
+
+                <h3>FAQ</h3>
+                <p>FAQ</p>
+            </div>
+
+            <div class="footer-coluna">
+                <h3>ATENDIMENTO</h3>
+                <p>Horário de atendimento:</p>
+                <p>Segunda à Sexta: 08:00 às 20:00</p>
+                <p>Sábado: 09:00 às 15:00</p>
+                <p>Endereço:</p>
+                <p>Rua Carlos Gomes, 132 - 9º andar - Centro</p>
+                <p>Franca/SP - CEP: 14003-000</p>
+
+                <h3>CENTRAL SAC</h3>
+                <p>(16) 4444-4444</p>
+            </div>
+
+            <div class="footer-coluna">
+                <h3>EMAIL PARA CONTATO</h3>
+                <p>pulsegeek@gmail.com</p>
+
+                <h3>REDES SOCIAIS</h3>
+                <p>Instagram: @pulsegeek</p>
+
+                <img src="img/logo.png" style="width: 150px; height: 100px;" title="Logo da Pulse Geek" alt="Logo">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright 2024 Pulse Geek - Todos os direitos reservados. Imagens meramente ilustrativas.</p>
+        </div>
+    </footer>
+
+    <footer class="footerMobile">
+        <div class="footer-container">
+
+            <div class="footer-coluna">
+                <h3>ATENDIMENTO</h3>
+                <p>Horário de atendimento:</p>
+                <p>Segunda à Sexta: 08:00 às 20:00</p>
+                <p>Sábado: 09:00 às 15:00</p>
+                <p>Endereço:</p>
+                <p>Rua Carlos Gomes, 132 - 9º andar - Centro</p>
+                <p>Franca/SP - CEP: 14003-000</p>
+
+                <h3>CENTRAL SAC</h3>
+                <p>(16) 4444-4444</p>
+
+                <h3>EMAIL PARA CONTATO</h3>
+                <p>pulsegeek@gmail.com</p>
+
+                <h3>REDES SOCIAIS</h3>
+                <p>Instagram: @pulsegeek</p>
+            </div>
+
+            <div class="footer-coluna">
+                <h3>DEPARTAMENTOS</h3>
+                <p>Cards</p>
+                <p>RPG</p>
+                <p>Colecionáveis</p>
+
+                <h3>INSTITUCIONAL</h3>
+                <p>Sobre</p>
+                <p>Termos e condições</p>
+
+                <h3>FAQ</h3>
+                <p>FAQ</p>
+                <img src="img/logo.png" style="width: 150px; height: 100px;" title="Logo da Pulse Geek" alt="Logo">
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p style="font-size: 20px;">Copyright 2024 Pulse Geek - Todos os direitos reservados. Imagens meramente ilustrativas.</p>
+        </div>
+    </footer>
+
+    <script src="js/mainScript.js"></script>
+    <script src="js/minhaContaFuncionarioScript.js"></script>
+
+</body>
+
+</html>
